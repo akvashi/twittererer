@@ -40,6 +40,7 @@ public class TimelineActivity extends AppCompatActivity implements TimelineView 
 
     @BindView(R.id.swipe_refresh)
     SwipeRefreshLayout swipeRefresh;
+
     @BindView(R.id.tweets)
     RecyclerView tweetList;
     @BindView(R.id.no_tweets)
@@ -61,8 +62,6 @@ public class TimelineActivity extends AppCompatActivity implements TimelineView 
 
         initTweetList();
 
-        swipeRefresh.setColorSchemeResources(R.color.brand_blue, R.color.dark_blue);
-        swipeRefresh.setOnRefreshListener(presenter::refreshTweets);
 
         presenter.initialise(this);
     }
@@ -119,19 +118,15 @@ public class TimelineActivity extends AppCompatActivity implements TimelineView 
 
     @Override
     public void showTimeline(List<TimelineItem> timelineItems) {
-        swipeRefresh.setVisibility(View.VISIBLE);
         tweetList.setVisibility(View.VISIBLE);
         noTweetsView.setVisibility(View.GONE);
         adapter.setItems(timelineItems);
-        swipeRefresh.setRefreshing(false);
     }
 
     @Override
     public void showNoTweets() {
-        swipeRefresh.setVisibility(View.GONE);
         tweetList.setVisibility(View.GONE);
         noTweetsView.setVisibility(View.VISIBLE);
-        swipeRefresh.setRefreshing(false);
     }
 
     @Override

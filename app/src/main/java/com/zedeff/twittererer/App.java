@@ -20,9 +20,9 @@ public class App extends Application {
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
     @SuppressWarnings("SpellCheckingInspection")
-    public static final String TWITTER_KEY = "Hgt8d2nLhZdQUaIvsyxYuPhb5";
+    public static final String TWITTER_KEY = "M5aQAjPBOfoRCjlppOEOwPFan";
     @SuppressWarnings("SpellCheckingInspection")
-    public static final String TWITTER_SECRET = "MeliZLYavlMiyhYTs97zyTCUOzznnog9cIrgfRHfc0TbN9PkP4";
+    public static final String TWITTER_SECRET = "7VIRQ0IQNrjwSxrFYawaDdVCqwXuZSMoDU7Jyc5XFU172JVdln";
 
     private static BaseApplicationComponent applicationComponent;
 
